@@ -173,15 +173,14 @@ ALTER TABLE ONLY public.services ALTER COLUMN service_id SET DEFAULT nextval('pu
 -- Data for Name: appointments; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.appointments VALUES (3, 12, 1, '10:30');
+INSERT INTO public.appointments VALUES (35, 40, 1, '10:30');
 
 
 --
 -- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.customers VALUES (11, 'Fabio', '555-555-5555');
-INSERT INTO public.customers VALUES (12, 'finton', '000-000-0000');
+INSERT INTO public.customers VALUES (40, 'Fabio', '555-555-5555');
 
 
 --
@@ -199,14 +198,14 @@ INSERT INTO public.services VALUES (5, 'trim');
 -- Name: appointments_appointment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.appointments_appointment_id_seq', 15, true);
+SELECT pg_catalog.setval('public.appointments_appointment_id_seq', 41, true);
 
 
 --
 -- Name: customers_customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.customers_customer_id_seq', 23, true);
+SELECT pg_catalog.setval('public.customers_customer_id_seq', 45, true);
 
 
 --
