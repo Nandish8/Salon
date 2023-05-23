@@ -16,7 +16,7 @@ MAIN_MENU() {
   done
 
 
- read SERVICE_ID_SELECTED
+  read SERVICE_ID_SELECTED
   case $SERVICE_ID_SELECTED in
   [1-5]) CREATE_APPOINTMENT ;;
   *) MAIN_MENU "I could not find that service. What would you like today?" ;;
@@ -45,7 +45,7 @@ CREATE_APPOINTMENT() {
     CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone = '$CUSTOMER_PHONE'")
     INSERT_SERVICE_TIME=$($PSQL "INSERT INTO appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
   fi
-  echo "I have put you down for a $(echo $SERVICE_SELECTED | sed -r 's/^ *| *$//g') service at $SERVICE_TIME, $(echo $CUSTOMER_NAME | sed -r 's/^ *| *$//g')."
+  echo "I have put you down for a $(echo $SERVICE_SELECTED | sed -r 's/^ *| *$//g') at $SERVICE_TIME, $(echo $CUSTOMER_NAME | sed -r 's/^ *| *$//g')."
 
 }
 
